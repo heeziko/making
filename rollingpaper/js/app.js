@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function fetchMessages(search = '') {
         showLoading(true);
         try {
-            const url = `http://13.125.143.67/api/get_messages.php?search=${encodeURIComponent(search)}`;
+            const url = `http://13.125.143.67/rollingpaper/api/get_messages.php?search=${encodeURIComponent(search)}`;
             const response = await fetch(url);
             const result = await response.json();
             
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btnSubmitMessage.disabled = true;
         
         try {
-            const response = await fetch('http://13.125.143.67/api/create_message.php', {
+            const response = await fetch('http://13.125.143.67/rollingpaper/api/create_message.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
